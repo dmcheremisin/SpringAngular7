@@ -1,18 +1,14 @@
 import {Injectable} from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {User} from "../models/user.model";
+import { HttpClient} from '@angular/common/http';
 import {Observable} from "rxjs/index";
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 
 @Injectable()
 export class UserService {
 
-  constructor(private http:HttpClient) {}
+  private userUrl : string = '/api/users';
 
-  private userUrl = 'http://localhost:8082/api';
+  constructor(private http:HttpClient) {
+  }
 
   public getUsers(): Observable<any> {
     return this.http.get(this.userUrl);
