@@ -9,11 +9,11 @@ There are 2 branches in the project:
 2. change your db connetion settings in the properties file backend/src/main/resources/application.properties
 3. build root pom.xml file
 
-## Specific steps for master branch - 
+## Specific steps for master branch
 4. go in a console to the folder frontend and write command "ng serve" - node server will be up on the port 4200
 5. run spring boot application the way you like: from IDE, from maven(mvn springboot:run)
 
-## Specific steps for tomcat branch - 
+## Specific steps for tomcat branch
 4. deploy war file from backend module to the separate tomcat instance
 
 ## About the project
